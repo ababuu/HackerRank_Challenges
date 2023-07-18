@@ -1,10 +1,12 @@
 function insertionSort1(n, arr) {
     // Write your code here
-    let element = arr[n-1];
-    for(var i=n-2;i>=0 && arr[i]>element;i--){
+    const unsorted=arr[n-1];
+    let index=null;
+    for(let i=n-2;arr[i]>unsorted && i>=0;i--){
         arr[i+1]=arr[i];
+        index=i;
         console.log(arr.join(' '));
     }
-    arr[i+1]=element;
+    arr[index]=unsorted;
     console.log(arr.join(' '));
 }
